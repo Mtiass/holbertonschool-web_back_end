@@ -5,7 +5,7 @@
 def list_all(mongo_collection):
     """mongo_collection will be the pymongo collection object."""
     docs = list(mongo_collection.find())
-    if != docs:
+    if not docs:
         empty = []
         return empty
     else:

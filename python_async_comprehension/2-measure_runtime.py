@@ -14,11 +14,8 @@ async def measure_runtime() -> float:
     """
     Async couroutine func.
     """
-    start = asyncio.get_event_loop().time()
-    await asyncio.gather(
-            async_comprehension(), async_comprehension(),
-            async_comprehension(), async_comprehension()
-            )
-    end = asyncio.get_event_loop().time()
+    start = time.time()
+    await asyncio.gather(async_comprehension())
+    end = time.time()
     total = end - start
     return total

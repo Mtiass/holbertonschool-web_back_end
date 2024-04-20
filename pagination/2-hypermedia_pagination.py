@@ -47,7 +47,7 @@ class Server:
         start_in = (page - 1) * page_size
         end_in = page * page_size
         return start_in, end_in
-    
+
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
         """
         Method that returns a dictionary containing the following

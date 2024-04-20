@@ -9,5 +9,7 @@ def schools_by_topic(mongo_collection, topic):
     topic (string) will be topic searched
     """
     query = {"topic": topic}
-    listdocs = list(mongo_collection.find(query))
-    return listdocs
+    schlist = []
+    for sch in mongo_collection.find(query):
+        schools.append(school)
+    return schlist

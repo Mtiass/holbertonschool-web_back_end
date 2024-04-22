@@ -5,5 +5,5 @@ export default function returnHowManyArguments(...args) {
         arg_con += 1;
     }
 
-    return arg_con
+    return arg_con;
 }

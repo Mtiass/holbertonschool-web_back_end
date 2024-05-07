@@ -1,8 +1,10 @@
 // Function cleanSet, returns a string of all the set values that start with string (startString).
 export default function cleanSet(set, startString) {
-  const array = Array.from(set);
-  const filterarray = array.filter((value) => value.startsWith(startString));
-  const extracarray = filterarray.map((value) => value.substring(startString.length));
-  const result = extracarray.join('-');
-  return result;
+  if (!startString || typeof startString!== 'string') {
+    return '';
+  }
+  const filterVal = Array.from(set)
+  .filter((value) => typeof value === 'string' && value.startsWith(startString))
+  .map((value) => value.substring(startString.length));
+  return filterVal.join('-');
 }
